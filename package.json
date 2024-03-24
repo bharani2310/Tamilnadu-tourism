@@ -8,7 +8,6 @@
     "start": "node index.js",
     "start-dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "keywords": [],
   "author": "",
@@ -24,5 +23,8 @@
     "mongodb": "^6.4.0",
     "mongoose": "^8.2.0",
     "react-router-dom": "^6.22.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
