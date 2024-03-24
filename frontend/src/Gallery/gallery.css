@@ -1,0 +1,94 @@
+.card {
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover,
+.card:focus {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-img-top,
+.card:focus .card-img-top {
+    transform: scale(1.1);
+}
+
+.title-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: calc(100% - 20px); /* Adjust the width as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.card:hover .title-container,
+.card:focus .title-container {
+    opacity: 1;
+}
+
+.card-title {
+    color: white;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-effect:hover,
+.hover-effect:focus {
+    transform: scale(1.1);
+}
+
+.image-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 93%;
+    color: white;
+    padding: 5px;
+    transition: opacity 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    opacity: 0;
+}
+
+.image-container:hover .image-title,
+.image-container:focus .image-title {
+    opacity: 1;
+}
+
+/* For touchscreen devices, apply hover effect on focus */
+@media (hover: none) {
+    .card:focus .card-img-top {
+        transform: scale(1.1);
+    }
+
+    .card:focus .title-container {
+        opacity: 1;
+    }
+
+    .image-container:focus .image-title {
+        opacity: 1;
+    }
+}
