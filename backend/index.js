@@ -68,9 +68,13 @@ import reviewRoute from './routes/reviews.js';
 import bookingRoute from './routes/bookings.js';
 import galleryRoute from './routes/gallery.js';
 import bodyParser from 'body-parser';
-import path from 'path'; // Import path module
+import { fileURLToPath } from 'url'; // Import fileURLToPath function
+import path from 'path';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url); // Get the current module's filename
+const __dirname = path.dirname(__filename); // Get the directory name of the current module
 
 const app = express();
 const port = process.env.PORT || 8000;
